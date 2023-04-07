@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: #f8f9fa; 
+}
+.logo {
+    width: 80px !important;
+    margin: 0 !important;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 0px;
+}
+.nav-links a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(102, 82, 82) ;
+    text-decoration: none;
+    font-size: 16px !important;
+    padding: 0 5px;
+}
+.nav-links a:hover, a.active  {
+    color:  rgb(243, 138, 103) !important;
+}
+.toggler {
+    margin: auto 0px;
+    font-size: 22px;
+    margin: 5px;
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: auto;
+        top: 90px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.7) !important;
+        z-index: 1;
+        transform: translate(100%);
+        transition: 0.5s;
+    }
+    .nav-links a {
+        color: rgb(214, 214, 214) !important;
+        padding: 15px 0;
+    }
+    .nav-links a.active  {
+        color:  rgb(243, 138, 103) !important;
+    }
+    .toggler {
+        display: block;
+    }
+}
+.nav-active {
+    transform: translate(0%);
+}
+
+.section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("imgs/contact.jpg") no-repeat fixed;
+    margin-top: 90px;
+    background-position: center ;
+    background-size: cover;
+    height: 70vh;
+    position: relative;
+}
+.heading {
+    text-align: center;
+    padding: 200px;
+    font-family: Roboto condensed;
+}
+.heading h3{
+    color: white;
+    font-size: 48px;
+}
+.heading p {
+    font-size: 20px;
+    color: white;
+}
+
+.contact-form {
+    background-color: rgb(252, 246, 238);
+    padding: 40px 0;
+}
+.contact-form form {
+    background-color: rgb(255, 255, 255 );
+    box-shadow:   0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    padding: 5px 10px;
+}
+form .user-details {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 15px;  
+}
+.user-details .input-box {
+    width: calc(100%/2-20px);
+    margin: 5px 0;
+    
+}
+.input-box textarea {
+    width: 100%;
+    height: 200px;
+}
+.input-box input, textarea {
+    height: 35px;
+    width: 100%;
+    border: none;
+    outline: none !important;
+    background-color: none !important;
+    border-bottom: 1px solid rgb(165, 164, 164);
+}
+.input-box .details {
+    font-size: 18px;
+}
+form .input-box input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background: #00bcd4;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.input-box input[type="submit"]:hover {
+    background: #0296aa;
+}
+
+
+
+

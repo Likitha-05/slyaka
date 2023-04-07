@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: #f8f9fa; 
+}
+.logo {
+    width: 80px !important;
+    margin: 0 !important;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 0px;
+}
+.nav-links a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(102, 82, 82) !important;
+    text-decoration: none;
+    font-size: 16px !important;
+    padding: 0 5px;
+}
+.nav-links a:hover, a.active  {
+    color:  rgb(243, 138, 103) !important;
+}
+.toggler {
+    margin: auto 0px;
+    display: none;
+    font-size: 22px;
+    margin: 5px;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 12px 16px !important;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: auto;
+        top: 90px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0,0,0,0.7) !important;
+        z-index: 1;
+        transform: translate(100%);
+        transition: 0.5s;
+    }
+    .nav-links a {
+        color: rgb(214, 214, 214) !important;
+        padding: 10px 0 ;
+    }
+    .nav-links a.active  {
+        color:  rgb(243, 138, 103) !important;
+    }
+}
+@media screen and (max-width:400px) {
+    .nav-links {
+        height: 100px !important;
+    }
+}
+.nav-active {
+    transform: translate(0%);
+}
+
+.header {
+    background: url("imgs/career.jpg") ;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-top: 90px;
+    background-position: center;
+}
+
+.search-wrapper {
+    width: 60%;
+    margin: auto;
+    min-width: 300px;
+    height: 3.5rem;
+    position: relative;
+}
+.search-box {
+    width: 100%;
+    position: absolute;
+    background-color: #f8f9fa;
+    box-shadow: rgba(2, 11, 20, 0.2) 0px 5px 15px;
+    top: -45%;
+    height: 100%;
+}
+.search-card {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0.5rem;
+}
+.search-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+}
+.search-button {
+    width: 200px;
+    border: none;
+    color: white;
+    outline: none;
+}
+.filter-box {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    width: 60%;
+    min-width: 300px;
+    margin: auto;
+}
+.filter-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+.filter-select {
+    border: none;
+    padding: 0.2rem;
+    width: 150px;
+    padding: 5px 10px;
+}
+
+.job-cards {
+    width: 65%;
+    margin: 30px auto;
+    min-width: 300px;
+}
+.job-card {
+    padding: 10px;
+    margin: 20px 0;
+}
+.job-card:hover {
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+}
+.job-title h4 {
+    padding: 5px 13px;
+    font-weight: 700;
+}
+.job-content {
+    padding: 0 0 0 15px ;
+}
+.content {
+    float: right;
+    line-height: 10px;
+    text-align: end;
+    padding: 5px 5px 0 0;
+}
+.job-content ul {
+    display: flex;
+    padding: 0;
+}
+.job-content ul li {
+    padding-right : 10px;
+    color: gray;
+    line-height: 0px;
+    font-size: 14px;
+}

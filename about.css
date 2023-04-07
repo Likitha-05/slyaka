@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: #f8f9fa; 
+}
+.logo {
+    width: 80px !important;
+    margin: 0 !important;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 0px;
+}
+.nav-links a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(102, 82, 82) ;
+    text-decoration: none;
+    font-size: 16px !important;
+    padding: 0 5px;
+}
+.nav-links a:hover, a.active  {
+    color:  rgb(243, 138, 103);
+}
+.toggler {
+    margin: auto 0px;
+    display: none;
+    font-size: 22px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: auto;
+        top: 90px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0,0,0,0.7) !important;
+        z-index: 1;
+        transform: translate(100%);
+        transition: 0.5s;
+    }
+    .nav-links a {
+        color: rgb(214, 214, 214) !important;
+        padding: 15px 0;
+    }
+    .nav-links a.active  {
+        color:  rgb(243, 138, 103) !important;
+    }
+}
+.nav-active {
+    transform: translate(0%);
+}
+
+/*section1*/
+.about {
+    background:linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2)), url('imgs/img1.jpg') no-repeat fixed;
+    /*background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.3));*/
+    background-position: center ;
+    background-size: cover;
+    position: relative; 
+    margin-top: 50px;
+}
+
+.about1 {
+    max-width: 900px;
+    padding: 110px 50px 110px 110px;
+}
+.about1 h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    color: rgb(63, 182, 219);
+}
+.about1 p {
+    color: rgb(77, 77, 77);
+    font-size: 17px;
+}
+.about1 button {
+    width: 150px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white !important;
+    margin-top: 20px;
+}
+.about1 button:hover {
+    opacity: 0.9;
+    color: white !important;
+}
+
+/*section2*/
+.column1 {
+    padding: 50px 15px 50px 30px !important;
+}
+.column2 {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.column2 img {
+    width: 600px;
+    height: 350px;
+    margin: 20px !important;
+}
+
+/*section3*/
+.about3 {
+    background: rgba(0, 0, 0, 0.7) url('imgs/img3.png') fixed;
+    background-position: center ;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: darken;
+    color: white;
+}
+.about3 .content {
+    text-align: center;
+    align-content: space-between;
+    max-width: 700px;
+    margin: auto;
+    padding: 150px 30px; 
+}
+.about3 .content h2 {
+    font-size: 44px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 4px rgb(103, 103, 103);
+}
+.content p {
+    font-size: 19px;
+}
+
+.slogan {
+    background-color: rgb(255, 240, 221);
+    justify-content: center;
+    align-items: center;
+    margin: 0px !important;
+    max-height: 650px;
+    text-align: center;
+    padding: 100px 30px;
+}
+.slogan img {
+    width: 650px; 
+    height: auto;
+}
+.slogan h2 {
+    font-weight: 600;
+    margin-left: 50px;
+    padding: 20px 60px;
+    color: rgb(86, 86, 86);
+    font-family: Carter one;
+}
+
+/*responsive section 1 & 2*/
+@media (max-width:900px) {
+    .about1 {
+        padding: 70px 15px;
+    }
+    .about1 h1 {
+        font-size: 28px;
+    }
+    .about1 p {
+        font-size: 15px;
+    }
+    .about2 .row{
+        flex-direction: column;
+    }
+    .slogan {
+        flex-direction: column;
+        padding: 30px 30px;
+    }
+    .slogan h2 {
+        margin-left: 0;
+        padding: 25px 10px 0;
+    }
+    .content {
+        padding: 70px 10px !important;
+    }
+    .content h2 {
+        font-size: 36px !important;
+    }
+    .content p {
+        font-size: 16px;
+    }
+}
+@media (max-width:450px){
+    .navbar-brand {
+        margin-left: 45px !important;
+    }
+    .slogan {
+        padding: 40px 0px 20px;
+    }
+    .slogan h2 {
+        font-size: 20px;
+    }
+}
+
+.contact-content {
+    text-align: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 70px auto;
+}
+.contact-content button {
+    color: white;
+    font-size: 18px;
+    padding: 8px 18px;
+}
+.contact-content button:hover {
+    color: white !important;
+    background-color: #17a2b8;
+}
+
+/*footer*/
+.quick-links a.active {
+    color: white !important;
+}
+
